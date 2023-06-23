@@ -10,4 +10,5 @@ interface APIService {
 
     @GET("/api?format=json")
     suspend fun getJoke() : Joke
+
 }

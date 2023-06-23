@@ -1,3 +1,8 @@
 package com.example.jokesapp.models
 
-data class Joke(val id: Int, val joke: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "joke_table")
+data class Joke(@PrimaryKey(autoGenerate = false) val id: Int?=null,
+                val joke: String)

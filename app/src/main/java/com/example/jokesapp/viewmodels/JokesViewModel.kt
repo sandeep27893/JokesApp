@@ -27,7 +27,7 @@ class JokesViewModel @Inject constructor(private val jokesRepository: JokesRepos
 
     fun fetchJoke() {
         viewModelScope.launch {
-            val joke = jokesRepository.fetchJoke()
+             jokesRepository.fetchJoke()
             _jokes.value = jokesRepository.getJokes()
         }
     }

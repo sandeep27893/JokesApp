@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 */
 
         jokesViewModel.jokes.observe(this@MainActivity, Observer {
+
                 jokes -> adapter.submitList(jokes)
             adapter.notifyDataSetChanged()
         })
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        timer.schedule(hourlyTask, 0L ,1000*20)
+        timer.schedule(hourlyTask, 0L ,1000*2)
 
     }
 
